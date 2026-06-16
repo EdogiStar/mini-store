@@ -1,5 +1,4 @@
 import ProductCard from "../components/ProductCard"
-
 function Shop() {
   // Temporary static data (later you will replace with FakeStore API)
   const products = [
@@ -65,6 +64,7 @@ function Shop() {
     <div className="min-h-screen py-12">
       <div className="max-w-7xl mx-auto px-4">
 
+      
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-3xl font-bold">All Products</h1>
@@ -98,7 +98,9 @@ function Shop() {
               image={product.image}
               onAddToCart={() => console.log("Added:", product.title)}
             />
-          ))}
+          )
+         )
+      }
 
         </div>
       </div>
