@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
 
-function Navbar() {
+function NavBar() {
   return (
     <nav className="sticky top-0 z-50 w-full bg-white border-b">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -47,4 +47,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default NavBar
