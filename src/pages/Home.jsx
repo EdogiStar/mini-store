@@ -4,14 +4,17 @@ import ProductCard from "../components/ProductCard"
 
 function Home() {
   
-  const [products, setProducts] = useState([]);
-  
-  const [loading, setLoading] = useState(true);
-  
-  const [error, setError] = useState("");
-  
+  // Store products
+  const [products, setProducts] = useState([])
+
+  // Track loading
+  const [loading, setLoading] = useState(true)
+
+  // Track errors
+  const [error, setError] = useState("")
+
   useEffect(() => {
-      fetch("https://fakestoreapi.com/products?limit=5")
+    fetch("https://fakestoreapi.com/products?limit=5")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products")
@@ -31,12 +34,15 @@ function Home() {
       .finally(() => {
         setLoading(false)
       })
+
   }, [])
-  
+
+  // Loading UI
   if (loading) {
     return <h2>Loading products...</h2>
   }
 
+  // Error UI
   if (error) {
     return <h2>{error}</h2>
   }
