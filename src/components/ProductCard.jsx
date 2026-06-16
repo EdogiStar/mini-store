@@ -21,11 +21,8 @@ function ProductCard({ title, price, image, onAddToCart }) {
           ${price}
         </p>
 
-        <button
-          onClick={onAddToCart}
-          className="w-full mt-4 py-2 bg-black text-white rounded-lg text-sm font-medium hover:opacity-90 transition-opacity"
-        >
-          Add to Cart
+        <button onClick={onAddToCart} className="w-full mt-4 py-2 bg-black text-white rounded-lg text-sm font-medium hover:opacity-90 transition-opacity">
+            Add to Cart
         </button>
       </div>
     </div>
