@@ -2,7 +2,7 @@ import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
 import ProductCard from "../components/ProductCard"
 
-function Home() {
+function Home({addToCart}) {
   
   // Store products
   const [products, setProducts] = useState([])

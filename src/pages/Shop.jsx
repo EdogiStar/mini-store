@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react"
 import ProductCard from "../components/ProductCard"
 
-function Shop() {
+function Shop({addToCart}) {
   // Store products
   const [products, setProducts] = useState([])
 
