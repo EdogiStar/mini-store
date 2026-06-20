@@ -12,7 +12,7 @@ function Shop({addToCart}) {
   const [error, setError] = useState("")
 
   useEffect(() => {
-    fetch("https://fakestoreapi.com/products")
+    fetch(`${import.meta.env.VITE_API_URL}/api/products`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch products")
