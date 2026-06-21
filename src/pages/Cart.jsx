@@ -19,7 +19,7 @@ if (cart.length === 0) {
 return (
 
 <div className="min-h-screen p-6">
-<h2>Your cart is empty</h2>
+<h2>Cart is empty. </h2>
 </div>
 
 )
@@ -30,10 +30,10 @@ return (
 <div className="max-w-6xl mx-auto p-6">
 
 <h1 className="text-3xl font-bold mb-8">
-Your Cart
+Cart
 </h1>
 
-
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
 {cart.map((item) => (
 
 <div
@@ -56,7 +56,7 @@ className="w-28 h-28 object-cover"
 
 
 <p>
-₦{item.price}
+${item.price}
 </p>
 
 
@@ -103,7 +103,7 @@ className="ml-4 text-red-500"
 
 Subtotal:
 
-₦{item.price * item.quantity}
+${item.price * item.quantity}
 
 </p>
 
@@ -112,17 +112,17 @@ Subtotal:
 </div>
 
 ))}
-
+</div>
 
 {/* Grand Total */}
 
-<div className="mt-8">
+<div className="mt-10 text-right">
 
 <h2 className="text-2xl font-bold">
 
 Grand Total:
 
-₦{total}
+${total}
 
 </h2>
 

@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react"
 import { Link } from "react-router-dom"
+
+import WhyChooseUs from "../components/WhyChooseUs"
+import Testimonials from "../components/Testimonials"
+import Newsletter from "../components/Newsletter"
 import ProductCard from "../components/ProductCard"
 
 function Home({addToCart}) {
@@ -116,6 +120,10 @@ function Home({addToCart}) {
       </div>
 
     </div>
+    
+   <WhyChooseUs />
+   <Testimonials />
+   <Newsletter />
 
   </div>
 )
